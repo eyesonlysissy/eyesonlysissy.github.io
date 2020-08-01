@@ -36,7 +36,16 @@
       var xavg=0;
       var yavg=0;
       var on=false;
-      
+      var imgn = 1;
+      var bod = document.getElementById("bod");
+      document.body.onkeypress = function(e){
+        if(e.keyCode==13){
+          alert("bruh");
+          if(imgn>=17){imgn=1}
+          bod.src="b"+imgn+".jfif"
+          imgn++;
+        }
+      };
       webgazer.setGazeListener(function(data, elapsedTime) {
         if(!on){on=true;setTimeout(function(){
           document.getElementById("webgazerFaceFeedbackBox").remove();
