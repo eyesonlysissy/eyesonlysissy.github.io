@@ -11,7 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>    
   </head>
   <body style="background-color:pink;">
-    <div class="container theme-showcase">
+    <div id="main" class="container theme-showcase">
       <div class="jumbotron">
           <h2>Sissy Challenge!</h2>
       <div class="panel panel-default">
@@ -38,8 +38,10 @@
       var on=false;
       var imgn = 1;
       var bod = document.getElementById("bod");
+      var test=false;
       document.body.onkeypress = function(e){
         if(e.keyCode==13){
+          test=true;
           if(imgn>=17){imgn=1}
           bod.src="b"+imgn+".jfif"
           imgn++;
@@ -67,12 +69,12 @@
         yavg/=posy.length;
         cock.style.left=xavg;
         cock.style.top=yavg;
-        if(yavg>=375){
+        if(yavg>=375&test){
           b = document.createElement('div');
           b.class = "panel panel-danger";
-          b.innerText = "Come on faggot!!! That stuff is not meant for you sissy slut! Reload to try again";
-          document.body.appendChild(b);
-          alert("bruh");
+          b.innerHTML = '<div class="panel panel-default"> <div class="panel-heading"> <h3 class="panel-title">You Failed Faggot!</h3> </div> <div class="panel-body"> Come on faggot!!! That stuff is not meant for you sissy slut! Reload to try again </div> </div>';
+          document.getElementById("main").appendChild(b);
+          bod.remove();
         }
       }).begin();
     </script>
