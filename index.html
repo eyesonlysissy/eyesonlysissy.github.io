@@ -34,7 +34,9 @@
       var posy = [];
       var xavg=0;
       var yavg=0;
+      var on=false;
       webgazer.setGazeListener(function(data, elapsedTime) {
+        if(!on){on=true;document.getElementById("webgazerFaceFeedbackBox").width=160;document.getElementById("webgazerFaceFeedbackBox").height=120;}
         if (data == null) {
           return;
         }
