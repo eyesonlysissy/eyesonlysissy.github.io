@@ -19,13 +19,14 @@
               <h3 class="panel-title">Welcome To The Sissy Eyes-Only Challenge!</h3>
           </div>
           <div class="panel-body">
-              First look at all the hearts on the screen and click on the 2 times each to calibrate the eye tracker (the cock is where the tracker thinks you are looking)! 
+              First look at all the hearts on the screen and click on them 2 times each to calibrate the eye tracker (the cock is where the tracker thinks you are looking)! 
             Then press Enter to start. Once you have started you must only look at the eyes ONLY and if you look anywhere else you will lose! Remember to keep your head still have fun!
           </div> 
       </div>
       </div>
       <img id="bod" src="b1.jfif" style="position:absolute;top:35%;left:30%;" width="480" height="480">
     </div>
+    <img src="h.png" style="position:absolute;z-index:1;top:10%;left:50%;">
     <img id="cock" src="heart.png" style="position:absolute;width:20px;height:40px;"/>
     <script src="webgazer.js" type="text/javascript"></script>
     <script>
@@ -72,9 +73,10 @@
         if(yavg>=375&test){
           b = document.createElement('div');
           b.class = "panel panel-danger";
-          b.innerHTML = '<div class="panel-heading"> <h3 class="panel-title">You Failed Faggot!</h3> </div> <div class="panel-body"> Come on faggot!!! That stuff is not meant for you sissy slut! Reload to try again </div>';
+          b.innerHTML = '<div class="panel panel-danger"> <div class="panel-heading"> <h3 class="panel-title">You Failed Faggot!</h3> </div> <div class="panel-body"> Come on faggot!!! That stuff is not meant for you sissy slut! Reload to try again </div></div>';
           document.getElementById("main").appendChild(b);
           bod.remove();
+          test=false;
         }
       }).begin();
     </script>
