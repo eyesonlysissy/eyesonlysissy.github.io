@@ -24,7 +24,7 @@
           </div> 
       </div>
       </div>
-      <img id="bod" src="b1.jfif">
+      <img id="bod" src="b1.jfif" style="top:50%;left:50%;">
     </div>
     <img id="cock" src="heart.png" style="position:absolute;width:20px;height:40px;"/>
     <script src="webgazer.js" type="text/javascript"></script>
@@ -38,14 +38,10 @@
       var on=false;
       webgazer.setGazeListener(function(data, elapsedTime) {
         if(!on){on=true;setTimeout(function(){
-          document.getElementById("webgazerFaceFeedbackBox").style.width=40;
-          document.getElementById("webgazerFaceFeedbackBox").style.height=30;
-          document.getElementById("webgazerFaceOverlay").width=160;
-          document.getElementById("webgazerFaceOverlay").height=120;
-          document.getElementById("webgazerVideoFeed").style.width=160;
-          document.getElementById("webgazerVideoFeed").style.height=120;
-          alert("bruh")
-        },5000)}
+          document.getElementById("webgazerFaceFeedbackBox").remove();
+          document.getElementById("webgazerFaceOverlay").remove();
+          document.getElementById("webgazerVideoFeed").remove();
+        },3000)}
         if (data == null) {
           return;
         }
