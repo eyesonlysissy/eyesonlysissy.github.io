@@ -24,7 +24,7 @@
           </div> 
       </div>
       </div>
-      <img id="bod" src="b1.jfif" style="top:50%;left:50%;">
+      <img id="bod" src="b1.jfif" style="position:absolute;top:50%;left:50%;">
     </div>
     <img id="cock" src="heart.png" style="position:absolute;width:20px;height:40px;"/>
     <script src="webgazer.js" type="text/javascript"></script>
@@ -36,6 +36,7 @@
       var xavg=0;
       var yavg=0;
       var on=false;
+      
       webgazer.setGazeListener(function(data, elapsedTime) {
         if(!on){on=true;setTimeout(function(){
           document.getElementById("webgazerFaceFeedbackBox").remove();
