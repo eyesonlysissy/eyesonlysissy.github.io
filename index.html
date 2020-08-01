@@ -36,7 +36,10 @@
       var yavg=0;
       var on=false;
       webgazer.setGazeListener(function(data, elapsedTime) {
-        if(!on){on=true;document.getElementById("webgazerFaceFeedbackBox").width=160;document.getElementById("webgazerFaceFeedbackBox").height=120;}
+        if(!on){on=true;setTimeout(function(){
+          document.getElementById("webgazerFaceFeedbackBox").width=160;
+          document.getElementById("webgazerFaceFeedbackBox").height=120;
+        },5000)}
         if (data == null) {
           return;
         }
